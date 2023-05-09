@@ -1,0 +1,52 @@
+Exception in thread "DisconnectableInputStream source reader" org.gradle.api.UncheckedIOException: java.io.IOException: Bad file descriptor
+	at org.gradle.internal.UncheckedException.throwAsUncheckedException(UncheckedException.java:62)
+	at org.gradle.internal.UncheckedException.throwAsUncheckedException(UncheckedException.java:41)
+	at org.gradle.util.internal.DisconnectableInputStream$1.run(DisconnectableInputStream.java:127)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.io.IOException: Bad file descriptor
+	at java.base/java.io.FileInputStream.readBytes(Native Method)
+	at java.base/java.io.FileInputStream.read(FileInputStream.java:279)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:290)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:351)
+	at org.gradle.util.internal.DisconnectableInputStream$1.run(DisconnectableInputStream.java:98)
+	... 1 more
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :bootRunMainClassName UP-TO-DATE
+
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.4)
+
+2022-10-21 17:36:45.780  INFO 512908 --- [           main] c.g.MotionGuard.MotionGuardApplication   : Starting MotionGuardApplication using Java 11.0.16 on piForUni with PID 512908 (/home/martijn/Documents/project/cs22-35-main/build/classes/java/main started by martijn in /home/martijn/Documents/project/cs22-35-main)
+2022-10-21 17:36:45.792  INFO 512908 --- [           main] c.g.MotionGuard.MotionGuardApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-10-21 17:36:47.533  INFO 512908 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-21 17:36:47.709  INFO 512908 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 155 ms. Found 5 JPA repository interfaces.
+2022-10-21 17:36:49.186  INFO 512908 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityConfig' of type [com.group35.MotionGuard.config.MethodSecurityConfig$$EnhancerBySpringCGLIB$$a4c958c6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-21 17:36:50.045  INFO 512908 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8000 (http)
+2022-10-21 17:36:50.070  INFO 512908 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-21 17:36:50.072  INFO 512908 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-21 17:36:50.351  INFO 512908 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-21 17:36:50.352  INFO 512908 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4326 ms
+2022-10-21 17:36:51.251  INFO 512908 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-10-21 17:36:51.372  INFO 512908 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+2022-10-21 17:36:51.706  INFO 512908 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-10-21 17:36:51.910  INFO 512908 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-21 17:36:52.154  INFO 512908 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-21 17:36:52.185  INFO 512908 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-10-21 17:36:53.826  INFO 512908 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-10-21 17:36:53.846  INFO 512908 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-21 17:36:56.892  INFO 512908 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@69b80603, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5655278d, org.springframework.security.web.context.SecurityContextPersistenceFilter@7e366c6f, org.springframework.security.web.header.HeaderWriterFilter@426a4301, org.springframework.security.web.authentication.logout.LogoutFilter@552b15f6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3b764e66, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@712c9bcf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3c34c491, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@6318ff9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2dd46693, org.springframework.security.web.session.SessionManagementFilter@31aa9b01, org.springframework.security.web.access.ExceptionTranslationFilter@394e504d, org.springframework.security.web.access.intercept.AuthorizationFilter@585672dd]
+2022-10-21 17:36:57.151  WARN 512908 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-21 17:37:00.079  INFO 512908 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8000 (http) with context path ''
+2022-10-21 17:37:00.116  INFO 512908 --- [           main] c.g.MotionGuard.MotionGuardApplication   : Started MotionGuardApplication in 15.754 seconds (JVM running for 16.786)
+2022-10-21 17:40:22.551  INFO 512908 --- [nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-21 17:40:22.552  INFO 512908 --- [nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-10-21 17:40:22.556  INFO 512908 --- [nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms

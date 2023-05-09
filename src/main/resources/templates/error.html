@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+Mono">
+    <link rel="stylesheet" href="/styles/global.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="module" src="/scripts/global.js"></script>
+    <title>Error | MotionGuard</title>
+</head>
+
+<body>
+
+<h2>
+    [<span th:text="${status}">Status</span>]
+    <span th:text="${error}">Error</span>
+</h2>
+<p th:text="${message}">Message</p>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+spring.application.name: MotionGuard
+spring.profiles.active: dev
+
+### Server ###
+server:
+  error.include-message: always
+  error.include-binding-errors: always
+  tomcat.use-relative-redirects: true
+  servlet.session.timeout: 8h
+  servlet.session.cookie.max-age: 8h
+  port: 8000
+
+### Thymeleaf ###
+spring.thymeleaf:
+  prefix: classpath:/templates/
+  suffix: .html
+  enabled: true
+  cache: false
+
+### Database ###
+spring.jpa:
+  database-platform: org.hibernate.dialect.H2Dialect
+  database: POSTGRESQL
+  hibernate.ddl-auto: create-drop
+  properties.hibernate:
+    jdbc.lob.non_contextual_creation: true
+    jdbc.batch_size: 16
+    order_inserts: true
+    order_updates: false
+    format_sql: false
+    show_sql: false
+
+### Production datasource ###
+#spring.datasource:
+#  driverClassName: org.postgresql.Driver
+#  url: jdbc:postgresql://bronto.ewi.utwente.nl:5432/dab_di21222b_286?currentSchema=motionguard
+#  username: dab_di21222b_286
+#  password: je0kFlJIRZEUjaGH
+
+## Testing datasource ###
+spring.datasource:
+  driverClassName: org.h2.Driver
+  url: jdbc:h2:mem:db
+  username: sa
+  password: password
+
+### Local datasource ###
+#spring.datasource:
+#  driverClassName: org.postgresql.Driver
+#  url: jdbc:postgresql://localhost:5432/motionguard
+#  username: postgres
+#  password:

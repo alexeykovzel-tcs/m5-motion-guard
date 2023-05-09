@@ -1,0 +1,213 @@
+
+html {
+    --blue: #185cdc;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================================
+              COMPONENTS
+   ================================ */
+
+.enable-2fa {
+    display: flex;
+    align-items: center;
+}
+
+.frame {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+}
+
+.logo {
+    font-weight: bold;
+    margin-right: 50px;
+    font-size: 28px !important;
+}
+
+.brick {
+    border-radius: 5px;
+    padding: 10px 30px !important;
+    font-weight: bold;
+    border: none;
+}
+
+.blue-btn {
+    background: var(--blue);
+    margin-top: 40px;
+    min-width: 120px;
+    margin-left: auto;
+    color: white;
+}
+
+.white-btn {
+    background: white;
+    color: var(--blue) !important;
+}
+
+/* ================================
+                TOAST
+   ================================ */
+
+.toast {
+    color: white;
+    position: fixed;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    visibility: hidden;
+    background-color: darkgreen;
+    border-radius: 5px;
+    width: min-content;
+    min-width: 220px;
+    padding: 16px;
+    bottom: 30px;
+    z-index: 1;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+.toast.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+/* ================================
+            FEATURES-BOXED
+   ================================ */
+
+.features-boxed {
+    color: #313437;
+    background-color: #eef4f7;
+}
+
+.features-boxed p {
+    color: #7d8285;
+}
+
+.features-boxed h2 {
+    font-weight: bold;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    color: inherit;
+}
+
+@media (max-width: 767px) {
+    .features-boxed h2 {
+        margin-bottom: 25px;
+        padding-top: 25px;
+        font-size: 24px;
+    }
+}
+
+.features-boxed .intro {
+    font-size: 16px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.features-boxed .intro p {
+    margin-bottom: 0;
+}
+
+.features-boxed .features {
+    padding: 50px 0;
+}
+
+.features-boxed .item {
+    text-align: center;
+}
+
+.features-boxed .item .box {
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+
+.features-boxed .item .icon {
+    font-size: 60px;
+    color: #1485ee;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+.features-boxed .item .name {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 8px;
+    margin-top: 0;
+    color: inherit;
+}
+
+.features-boxed .item .description {
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.ignore-css {
+    all: unset;
+}

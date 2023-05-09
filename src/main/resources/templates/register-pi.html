@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/global.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script type="module" src="/scripts/global.js"></script>
+    <title>Register | MotionGuard</title>
+</head>
+
+<body>
+
+<default-header></default-header>
+
+<section class="portfolio-block">
+    <div class="container">
+        <div class="heading"><h2>Register device</h2></div>
+        <form id="register-form">
+            <label class="form-label" for="code">Code</label>
+            <input class="form-control" type="text" id="code" name="code">
+            <br>
+            <label class="form-label" for="location">Location</label>
+            <input class="form-control" type="text" id="location" name="location" placeholder="e.g. back door">
+            <button class="brick blue-btn">Register</button>
+        </form>
+    </div>
+</section>
+
+</body>
+
+<script type="module">
+    import * as PI from '/scripts/device.js';
+
+    $(document).ready(() => PI.registerForm($('#register-form')));
+</script>
+
+</html>

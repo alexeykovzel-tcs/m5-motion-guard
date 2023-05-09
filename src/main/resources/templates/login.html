@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/global.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/scripts/global.js" type="module"></script>
+    <script src="/scripts/account.js" type="module"></script>
+    <title>Login | MotionGuard</title>
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark navbar-expand-lg fixed-top portfolio-navbar" style="background: #185cdc">
+    <div class="container"><a class="navbar-brand logo" href="/"><strong>Motion Guard</strong></a>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link brick white-btn" href="/signup">Sign up</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="portfolio-block" style="margin-top:85px">
+    <div class="container">
+        <div class="heading"><h2>Login</h2></div>
+        <form id="auth-form">
+            <label class="form-label" for="username">Username</label>
+            <input class="form-control" id="username" type="text" name="username">
+            <br>
+            <label class="form-label" for="password">Password</label>
+            <input class="form-control" id="password" type="password" name="password">
+            <button class="brick blue-btn" type="submit">Login</button>
+        </form>
+    </div>
+</section>
+
+</body>
+
+<script type="module">
+    import {ready} from '/scripts/global.js'
+    import {login} from '/scripts/account.js';
+
+    ready(() => {
+        let form = document.getElementById('auth-form');
+        form.onsubmit = function (e) {
+            e.preventDefault();
+            login(form);
+        };
+    });
+</script>
+
+</html>

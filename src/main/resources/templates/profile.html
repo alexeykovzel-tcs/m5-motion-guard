@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/global.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script type="module" src="/scripts/global.js"></script>
+    <script type="module" src="/scripts/profile.js"></script>
+    <title>Profile | MotionGuard</title>
+</head>
+
+<body>
+
+<default-header></default-header>
+
+<section class="portfolio-block">
+    <div class="container">
+        <div class="heading"><h2>PROFILE</h2></div>
+        <form id="profile-form">
+            <div style="display: flex; gap: 20px; align-items: center">
+                <p>Username:</p>
+                <p id="username" style="font-weight: bold; font-size: 24px"></p>
+            </div>
+            <br>
+            <label class="form-label" for="password">Password</label>
+            <input class="form-control" id="password" name="password" type="password">
+            <br>
+            <button id="submit-btn" class="brick blue-btn">Save</button>
+        </form>
+    </div>
+</section>
+
+</body>
+
+</html>
